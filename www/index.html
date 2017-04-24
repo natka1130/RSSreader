@@ -22,21 +22,81 @@
               <input type="text" name="text-basic" id="text-basic" value="">
               <label for="text-basic">Hasło:</label>
               <input type="text" name="text-basic" id="text-basic" value="">
-              <a href="#details" class="ui-btn ui-btn-inline ui-corner-all ui-shadow" onclick="deviceInfo()">Zarejestruj</a>
-              <a href="#details" class="ui-btn ui-btn-inline ui-corner-all ui-shadow" onclick="deviceInfo()">Zaloguj</a>
+              <a href="#settings" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Zarejestruj</a>
+              <a href="#userpanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow" >Zaloguj</a>              
+              
             </div>
 		  <div data-role="footer" data-position="fixed">
 			<h1>(c) Natalia Lewczuk & Sebastian Kuśnierz</h1>
 		  </div> 
 		</div> 
 		
-		<!-- Mobile device details page -->
-		<div data-role="page" id="details" data-dialog="true">
+		<!-- User panel -->
+		<div data-role="page" id="settings">
 			<div data-role="header" data-theme="a">
-				<h1>It's me</h1>
+				<h1>RSS - Panel użytkownia</h1>
 			</div>
 			<div role="main" class="ui-content">
-				<p id="deviceDetails">Place for device details ...</p>
+				<label for="select-choice-8" class="select">Wiadomości z kraju:</label>
+                <select name="select-choice-8" id="zkraju" multiple="multiple" data-native-menu="false" data-icon="grid" data-iconpos="left">
+                    <option>Wybierz portal:</option>
+                    <optgroup label="Z kraju">
+                        <option value="wp" >Wirtualna Polska</option>
+                        <option value="interia">Interia</option>
+                        <option value="tvn24">TVN24</option>
+                        <option value="rmf">RMF news</option>
+                        <option value="polsat">Polsat news</option>
+                        <option value="brak">brak</option>
+                    </optgroup>
+                </select>
+                <label for="select-choice" class="select">Wiadomości ze świata:</label>
+                <select name="select-choice" id="zeswiata" multiple="multiple" data-native-menu="false" data-icon="grid" data-iconpos="left">
+                    <option>Wybierz portal:</option>
+                    <optgroup label="Ze świata">
+                        <option value="wp" >Wirtualna Polska</option>
+                        <option value="interia">Interia</option>
+                        <option value="tvn24">TVN24</option>
+                        <option value="rmf">RMF news</option>
+                        <option value="polsat">Polsat news</option>
+                        <option value="brak">brak</option>
+                    </optgroup>
+                </select>
+                <label for="select-choice-8" class="select">Sport:</label>
+                <select name="select-choice-8" id="sport" multiple="multiple" data-native-menu="false" data-icon="grid" data-iconpos="left">
+                    <option>Wybierz portal:</option>
+                    <optgroup label="Z kraju">
+                        <option value="wp">Wirtualna Polska</option>
+                        <option value="interia">Interia</option>
+                        <option value="tvn24">TVN24</option>
+                        <option value="rmf">RMF news</option>
+                        <option value="polsat">Polsat news</option>
+                        <option value="brak">brak</option>
+                    </optgroup>
+                </select>
+                <label for="select-choice-8">Biznes:</label>
+                <select name="select-choice-8" id="biznes" multiple="multiple" data-native-menu="false" data-icon="grid" data-iconpos="left">
+                    <option>Wybierz portal:</option>
+                    <optgroup label="Biznes">
+                        <option value="wp">Wirtualna Polska</option>
+                        <option value="interia">Interia</option>
+                        <option value="tvn24">TVN24</option>
+                        <option value="rmf">RMF news</option>
+                        <option value="polsat">Polsat news</option>
+                        <option value="brak">brak</option>
+                    </optgroup>
+                </select>
+                <label for="select-choice-8">Rozrywka:</label>
+                <select name="select-choice-8" id="rozrywka" multiple="multiple" data-native-menu="false" data-icon="grid" data-iconpos="left">
+                    <option>Wybierz portal:</option>
+                    <optgroup label="Rozrywka">
+                        <option value="wp" selected="">Wirtualna Polska</option>
+                        <option value="interia">Interia</option>
+                        <option value="tvn24">TVN24</option>
+                        <option value="rmf">RMF news</option>
+                        <option value="polsat">Polsat news</option>
+                        <option value="brak">brak</option>
+                    </optgroup>
+                </select>
 			</div>
 		</div>		
 		
