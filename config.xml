@@ -4,8 +4,8 @@
 		id          = "rssreadre"
         version     = "1.0.0" >
 
-    <name>Wczytnik RSS</name>
-    <description>Bussinescard</description>
+    <name>Czytnik RSS</name>
+    <description>Program do czytania kanałów RSS</description>
     <author  email="n.lewczuk@gmail.com">
 		Natalia Lewczuk
 	</author>
