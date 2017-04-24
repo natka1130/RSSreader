@@ -31,10 +31,10 @@
 		  </div> 
 		</div> 
 		
-		<!-- User panel -->
+		<!-- settings -->
 		<div data-role="page" id="settings">
 			<div data-role="header" data-theme="a">
-				<h1>RSS - Panel użytkownia</h1>
+				<h1>RSS - Ustawienia</h1>
 			</div>
 			<div role="main" class="ui-content">
 				<label for="select-choice-8" class="select">Wiadomości z kraju:</label>
@@ -97,6 +97,40 @@
                         <option value="brak">brak</option>
                     </optgroup>
                 </select>
+			</div>
+		</div>
+        <!-- User panel -->
+		<div data-role="page" id="userpanel">
+			<div data-role="header" data-theme="a">
+				<h1>RSS - Panel użytkownia</h1>
+			</div>
+			<div role="main" class="ui-content">
+				<div data-role="tabs" id="tabs">
+                      <div data-role="navbar">
+                        <ul>
+                          <li><a href="#zkraju" data-ajax="false">Z kraju</a></li>
+                          <li><a href="#zeswiata" data-ajax="false">Ze świata</a></li>
+                          <li><a href="#sport" data-ajax="false">Sport</a></li>
+                          <li><a href="#biznes" data-ajax="false">Biznes</a></li>
+                          <li><a href="#rozrywka" data-ajax="false">Rozrywka</a></li>
+                        </ul>
+                      </div>
+                      <div id="zkraju" class="ui-body-d ui-content">
+                        <h1>Wiadomości z kraju:</h1>
+                      </div>
+                      <div id="zeswiata">
+                        <h1>Wiadomości ze świata:</h1>
+                      </div>
+                      <div id="sport">
+                        <h1>Wiadomości sportowe:</h1>
+                      </div>
+                      <div id="biznes">
+                        <h1>Wiadomości biznesowe:</h1>
+                      </div>
+                      <div id="rozrywka">
+                        <h1>Rozrywka:</h1>
+                      </div>
+                    </div>
 			</div>
 		</div>		
 		
