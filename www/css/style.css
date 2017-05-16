@@ -1,0 +1,15 @@
+.item {
+	padding: 5px;
+}
+.item-description {
+	display: flex;
+}
+.item-description img {
+	margin-right: 10px;
+}
+.item-description a {
+
+}
+#saveChannels {
+	float: right;
+}
