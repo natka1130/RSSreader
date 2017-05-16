@@ -118,18 +118,18 @@ $.get(channels[2][3], function (data) {
 
   });
 });
-/**** pobieranie
+//ss*** pobieranie
 
 
-// $(document).on( "pagebeforeshow", function() {
-	// $(document).on('click','#zkraju-listbox > li.ui-last-child', function(e) {
-	// 	var myselect = $('select#zkraju');	 
-	// 	myselect.selectedIndex = myselect.val('brak'); 
-	// 	myselect.selectmenu("refresh");  
-	// });
-	// $(document).on('click','#zeswiata-listbox > li.ui-last-child', function(e) {
-	// 	var myselect = $("select#zeswiata");	 
-	// 	myselect.selectedIndex = myselect.val('brak'); 
-	// 	myselect.selectmenu("refresh");  
-	// });
-// });
+ $(document).on( "pagebeforeshow", function() {
+	 $(document).on('click','#zkraju-listbox > li.ui-last-child', function(e) {
+	 	var myselect = $('select#zkraju');	 
+	 	myselect.selectedIndex = myselect.val('brak'); 
+	 	myselect.selectmenu("refresh");  
+	 });
+	 $(document).on('click','#zeswiata-listbox > li.ui-last-child', function(e) {
+	 	var myselect = $("select#zeswiata");	 
+	 	myselect.selectedIndex = myselect.val('brak'); 
+	 	myselect.selectmenu("refresh");  
+	 });
+ });
