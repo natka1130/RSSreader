@@ -118,18 +118,36 @@ $.get(channels[2][3], function (data) {
 
   });
 });
-//ss*** pobieranie
+//ss*** pobieranie  */
 
 
  $(document).on( "pagebeforeshow", function() {
-	 $(document).on('click','#zkraju-listbox > li.ui-last-child', function(e) {
-	 	var myselect = $('select#zkraju');	 
-	 	myselect.selectedIndex = myselect.val('brak'); 
-	 	myselect.selectmenu("refresh");  
-	 });
-	 $(document).on('click','#zeswiata-listbox > li.ui-last-child', function(e) {
-	 	var myselect = $("select#zeswiata");	 
-	 	myselect.selectedIndex = myselect.val('brak'); 
-	 	myselect.selectmenu("refresh");  
-	 });
+	 
+// 	 $(document).on('click','#zkraju-listbox > li.ui-last-child', function(e) {
+// 	 	var myselect = $('select#zkraju');	 
+// 	 	myselect.selectedIndex = myselect.val('brak'); 
+// 	 	myselect.selectmenu("refresh");  
+// 	 });
+// 	 $(document).on('click','#zeswiata-listbox > li.ui-last-child', function(e) {
+// 	 	var myselect = $("select#zeswiata");	 
+// 	 	myselect.selectedIndex = myselect.val('brak'); 
+// 	 	myselect.selectmenu("refresh");  
+// 	 });
+	 
+	 $.get(channels[0][4], function (data) {
+  // var a = $(data).find("channel");  
+  // $('#channelTitle').append(a.find('title').first().text());
+
+  $(data).find("item").each(function () {
+    var el = $(this);
+    
+  	$('#rozrywka').append([
+	  { link: el.find("link").text(), title: el.find("title").text(), description: el.find("description").text() }
+	].map(Item).join(''));
+
+    // $( "#biznes" ).append( el.find("title").text() );
+
+  });
+});
+	 
  });
