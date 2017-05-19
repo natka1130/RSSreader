@@ -5,28 +5,7 @@ function init() {
 
 function onDeviceReady() {
 	
-	const Item = ({ title, link, description }) => `
-	    <div class="item">
-	      <h3>${title}</h3>
-	      <span class="item-description">${description} <a href="${link}" class="item-link">więcej..</a></span>
-	    </div>
-	`;
-
-   $.get("http://wiadomosci.wp.pl/kat,1342,ver,rss,rss.xml", function (data) {
-    // var a = $(data).find("channel");  
-    // $('#channelTitle').append(a.find('title').first().text());
-
-    $(data).find("item").each(function () {
-      var el = $(this);
-      
-      $('#zkraju').append([
-      { link: el.find("link").text(), title: el.find("title").text(), description: el.find("description").text() }
-    ].map(Item).join(''));
-
-      // $( "#biznes" ).append( el.find("title").text() );
-
-    });
-  });
+	$( "#biznes" ).append( 'asdsfsdfsdfsfs' );
 
 }
 
