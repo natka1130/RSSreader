@@ -4,29 +4,28 @@ function init() {
 }
 
 function onDeviceReady() {
-	
-	navigator.notification.alert('kufsdfsdfurwa');
 
-}
-function deviceInfo() {
-	$.get(channels[0][0], function (data) {
-  // var a = $(data).find("channel");  
-  // $('#channelTitle').append(a.find('title').first().text());
 
-  $(data).find("item").each(function () {
-    var el = $(this);
-    
-  	$('#rozrywka').append([
-	  { link: el.find("link").text(), title: el.find("title").text(), description: el.find("description").text() }
-	].map(Item).join(''));
+	function deviceInfo() {
+		$.get("http://wiadomosci.wp.pl/kat,1342,ver,rss,rss.xml", function (data) {
+		  // var a = $(data).find("channel");  
+		  // $('#channelTitle').append(a.find('title').first().text());
 
-    // $( "#biznes" ).append( el.find("title").text() );
+		  $(data).find("item").each(function () {
+		    var el = $(this);
 
-  });
-});
-	
-	navigator.notification.alert('kufsdfsdfurwa');
-	
+			$('#rozrywka').append([
+			  { link: el.find("link").text(), title: el.find("title").text(), description: el.find("description").text() }
+			].map(Item).join(''));
+
+		    // $( "#biznes" ).append( el.find("title").text() );
+
+		  });
+		});
+
+		navigator.notification.alert('kufsdfsdfurwa');
+
+	}
 }
 
 // 		 	kraj  swiat  sport  biznes  rozrywka
