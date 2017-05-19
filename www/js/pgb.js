@@ -4,6 +4,13 @@ function init() {
 }
 
 function onDeviceReady() {
+	
+	const Item = ({ title, link, description }) => `
+	    <div class="item">
+	      <h3>${title}</h3>
+	      <span class="item-description">${description} <a href="${link}" class="item-link">więcej..</a></span>
+	    </div>
+	`;
 
    $.get("http://wiadomosci.wp.pl/kat,1342,ver,rss,rss.xml", function (data) {
     // var a = $(data).find("channel");  
