@@ -4,11 +4,8 @@ function init() {
 }
 	
 function onDeviceReady() {
-		navigator.notification.beep(3);
-}
-
-function deviceInfo() {
-	navigator.notification.beep(3);
+		navigator.notification.beep(3);	
+	
 	$.get("http://wiadomosci.wp.pl/kat,1342,ver,rss,rss.xml", function (data) {
 
 	    $(data).find("item").each(function () {
@@ -21,6 +18,10 @@ function deviceInfo() {
 	    });
 	  });	
 }
+
+
+
+
 
 // 		 	kraj  swiat  sport  biznes  rozrywka
 // wp
