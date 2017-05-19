@@ -5,7 +5,7 @@ function init() {
 
 function onDeviceReady() {
 	
-	$( "#biznes" ).append( 'asdsfsdfsdfsfs' );
+	navigator.notification.alert('kufsdfsdfurwa');
 
 }
 
