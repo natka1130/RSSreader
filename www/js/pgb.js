@@ -1,7 +1,7 @@
 function init() {
 	document.addEventListener("deviceready",onDeviceReady, false);
 
-  $.get(channels[0][4], function (data) {
+  $.get(channels[0][0], function (data) {
   // var a = $(data).find("channel");  
   // $('#channelTitle').append(a.find('title').first().text());
 
