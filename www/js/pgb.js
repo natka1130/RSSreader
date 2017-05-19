@@ -4,19 +4,7 @@ function init() {
 }
 	
 function onDeviceReady() {
-		navigator.notification.beep(3);	
-	
-	$.get("http://wiadomosci.wp.pl/kat,1342,ver,rss,rss.xml", function (data) {
 
-	    $(data).find("item").each(function () {
-	      var el = $(this);
-
-	      $('#rozrywka').append([
-	      { link: el.find("link").text(), title: el.find("title").text(), description: el.find("description").text() }
-	    ].map(Item).join(''));
-
-	    });
-	  });	
 }
 
 
@@ -46,6 +34,19 @@ const Item = ({ title, link, description }) => `
       <span class="item-description">${description} <a href="${link}" class="item-link">więcej..</a></span>
     </div>
 `;
+
+	
+	$.get("http://wiadomosci.wp.pl/kat,1342,ver,rss,rss.xml", function (data) {
+
+	    $(data).find("item").each(function () {
+	      var el = $(this);
+
+	      $('#rozrywka').append([
+	      { link: el.find("link").text(), title: el.find("title").text(), description: el.find("description").text() }
+	    ].map(Item).join(''));
+
+	    });
+	  });	
 
 // var userChannels = [
 	
