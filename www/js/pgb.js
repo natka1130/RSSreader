@@ -2,13 +2,9 @@ function init() {
 	document.addEventListener("deviceready", onDeviceReady, false);
 
 }
-
-function deviceInfo() {
-		navigator.notification.alert('kufsdfsdfurwa');
-}
 	
 function onDeviceReady() {
-		navigator.notification.alert('kufsdfsdfurwa');
+		navigator.notification.beep(3);
 }
 
 // 		 	kraj  swiat  sport  biznes  rozrywka
