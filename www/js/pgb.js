@@ -1,25 +1,25 @@
 function init() {
-	document.addEventListener("deviceready",onDeviceReady, false);
+	document.addEventListener("deviceready", onDeviceReady, false);
 
-  $.get(channels[0][0], function (data) {
-  // var a = $(data).find("channel");  
-  // $('#channelTitle').append(a.find('title').first().text());
-
-  $(data).find("item").each(function () {
-    var el = $(this);
-    
-    $('#rozrywka').append([
-    { link: el.find("link").text(), title: el.find("title").text(), description: el.find("description").text() }
-  ].map(Item).join(''));
-
-    // $( "#biznes" ).append( el.find("title").text() );
-
-  });
-});
-
-function onDeviceReady() {
-	navigator.notification.beep(2);
 }
+function onDeviceReady() {
+   $.get(channels[0][0], function (data) {
+    // var a = $(data).find("channel");  
+    // $('#channelTitle').append(a.find('title').first().text());
+
+    $(data).find("item").each(function () {
+      var el = $(this);
+      
+      $('#rozrywka').append([
+      { link: el.find("link").text(), title: el.find("title").text(), description: el.find("description").text() }
+    ].map(Item).join(''));
+
+      // $( "#biznes" ).append( el.find("title").text() );
+
+    });
+  });
+}
+
 
 // 		 	kraj  swiat  sport  biznes  rozrywka
 // wp
