@@ -3,10 +3,7 @@ function init() {
 
 }
 
-function onDeviceReady() {
-
-
-	function deviceInfo() {
+function deviceInfo() {
 		$.get("http://wiadomosci.wp.pl/kat,1342,ver,rss,rss.xml", function (data) {
 		  // var a = $(data).find("channel");  
 		  // $('#channelTitle').append(a.find('title').first().text());
@@ -22,10 +19,10 @@ function onDeviceReady() {
 
 		  });
 		});
-
+}
+	
+function onDeviceReady() {
 		navigator.notification.alert('kufsdfsdfurwa');
-
-	}
 }
 
 // 		 	kraj  swiat  sport  biznes  rozrywka
