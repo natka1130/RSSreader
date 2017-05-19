@@ -8,6 +8,7 @@ function onDeviceReady() {
 }
 
 function deviceInfo() {
+	navigator.notification.beep(3);
 	$.get("http://wiadomosci.wp.pl/kat,1342,ver,rss,rss.xml", function (data) {
 
 	    $(data).find("item").each(function () {
