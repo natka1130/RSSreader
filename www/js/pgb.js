@@ -2,8 +2,10 @@ function init() {
 	document.addEventListener("deviceready", onDeviceReady, false);
 
 }
+
 function onDeviceReady() {
-   $.get(channels[0][0], function (data) {
+
+   $.get("http://wiadomosci.wp.pl/kat,1342,ver,rss,rss.xml", function (data) {
     // var a = $(data).find("channel");  
     // $('#channelTitle').append(a.find('title').first().text());
 
@@ -18,6 +20,7 @@ function onDeviceReady() {
 
     });
   });
+
 }
 
 
