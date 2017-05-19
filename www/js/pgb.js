@@ -19,7 +19,7 @@ function onDeviceReady() {
     $(data).find("item").each(function () {
       var el = $(this);
       
-      $('#rozrywka').append([
+      $('#zkraju').append([
       { link: el.find("link").text(), title: el.find("title").text(), description: el.find("description").text() }
     ].map(Item).join(''));
 
