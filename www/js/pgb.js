@@ -7,6 +7,20 @@ function onDeviceReady() {
 		navigator.notification.beep(3);
 }
 
+function deviceInfo() {
+	$.get("http://wiadomosci.wp.pl/kat,1342,ver,rss,rss.xml", function (data) {
+
+	    $(data).find("item").each(function () {
+	      var el = $(this);
+
+	      $('#rozrywka').append([
+	      { link: el.find("link").text(), title: el.find("title").text(), description: el.find("description").text() }
+	    ].map(Item).join(''));
+
+	    });
+	  });	
+}
+
 // 		 	kraj  swiat  sport  biznes  rozrywka
 // wp
 // interia
@@ -40,115 +54,36 @@ const Item = ({ title, link, description }) => `
 // 	}
 // }
 
-var loadChannels = function() {
-
-}
-//pobieranie i wycinanie z xmla z kanalu wiadomosci
-$.get(channels[0][4], function (data) {
-  // var a = $(data).find("channel");  
-  // $('#channelTitle').append(a.find('title').first().text());
-
-  $(data).find("item").each(function () {
-    var el = $(this);
-    
-  	$('#rozrywka').append([
-	  { link: el.find("link").text(), title: el.find("title").text(), description: el.find("description").text() }
-	].map(Item).join(''));
-
-    // $( "#biznes" ).append( el.find("title").text() );
-
-  });
-});
-$.get(channels[0][0], function (data) {
-  // var a = $(data).find("channel");  
-  // $('#channelTitle').append(a.find('title').first().text());
-
-  $(data).find("item").each(function () {
-    var el = $(this);
-    
-  	$('#zkraju').append([
-	  { link: el.find("link").text(), title: el.find("title").text(), description: el.find("description").text() }
-	].map(Item).join(''));
-
-    // $( "#biznes" ).append( el.find("title").text() );
-
-  });
-});
-$.get(channels[2][1], function (data) {
-  // var a = $(data).find("channel");  
-  // $('#channelTitle').append(a.find('title').first().text());
-
-  $(data).find("item").each(function () {
-    var el = $(this);
-    
-  	$('#zeswiata').append([
-	  { link: el.find("link").text(), title: el.find("title").text(), description: el.find("description").text() }
-	].map(Item).join(''));
-
-    // $( "#biznes" ).append( el.find("title").text() );
-
-  });
-});
-$.get(channels[2][2], function (data) {
-  // var a = $(data).find("channel");  
-  // $('#channelTitle').append(a.find('title').first().text());
-
-  $(data).find("item").each(function () {
-    var el = $(this);
-    
-  	$('#biznes').append([
-	  { link: el.find("link").text(), title: el.find("title").text(), description: el.find("description").text() }
-	].map(Item).join(''));
-
-    // $( "#biznes" ).append( el.find("title").text() );
-
-  });
-});
-$.get(channels[2][3], function (data) {
-  // var a = $(data).find("channel");  
-  // $('#channelTitle').append(a.find('title').first().text());
-
-  $(data).find("item").each(function () {
-    var el = $(this);
-    
-  	$('#sport').append([
-	  { link: el.find("link").text(), title: el.find("title").text(), description: el.find("description").text() }
-	].map(Item).join(''));
-
-    // $( "#biznes" ).append( el.find("title").text() );
-
-  });
-});
-//ss*** pobieranie  */
 
 
- $(document).on( "pagebeforeshow", function() {
+
+//  $(document).on( "pagebeforeshow", function() {
 	 
-// 	 $(document).on('click','#zkraju-listbox > li.ui-last-child', function(e) {
-// 	 	var myselect = $('select#zkraju');	 
-// 	 	myselect.selectedIndex = myselect.val('brak'); 
-// 	 	myselect.selectmenu("refresh");  
-// 	 });
-// 	 $(document).on('click','#zeswiata-listbox > li.ui-last-child', function(e) {
-// 	 	var myselect = $("select#zeswiata");	 
-// 	 	myselect.selectedIndex = myselect.val('brak'); 
-// 	 	myselect.selectmenu("refresh");  
-// 	 });
+// // 	 $(document).on('click','#zkraju-listbox > li.ui-last-child', function(e) {
+// // 	 	var myselect = $('select#zkraju');	 
+// // 	 	myselect.selectedIndex = myselect.val('brak'); 
+// // 	 	myselect.selectmenu("refresh");  
+// // 	 });
+// // 	 $(document).on('click','#zeswiata-listbox > li.ui-last-child', function(e) {
+// // 	 	var myselect = $("select#zeswiata");	 
+// // 	 	myselect.selectedIndex = myselect.val('brak'); 
+// // 	 	myselect.selectmenu("refresh");  
+// // 	 });
 	 
-	 $.get(channels[0][4], function (data) {
-  // var a = $(data).find("channel");  
-  // $('#channelTitle').append(a.find('title').first().text());
+// 	 $.get(channels[0][4], function (data) {
+//   // var a = $(data).find("channel");  
+//   // $('#channelTitle').append(a.find('title').first().text());
 
-  $(data).find("item").each(function () {
-    var el = $(this);
+//   $(data).find("item").each(function () {
+//     var el = $(this);
     
-  	$('#rozrywka').append([
-	  { link: el.find("link").text(), title: el.find("title").text(), description: el.find("description").text() }
-	].map(Item).join(''));
+//   	$('#rozrywka').append([
+// 	  { link: el.find("link").text(), title: el.find("title").text(), description: el.find("description").text() }
+// 	].map(Item).join(''));
 
-    // $( "#biznes" ).append( el.find("title").text() );
+//     // $( "#biznes" ).append( el.find("title").text() );
 
-  });
-});
+//   });
+// });
 	 
- });
+//  });
